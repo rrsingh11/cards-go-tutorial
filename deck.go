@@ -40,8 +40,8 @@ func (d deck) toString() string{
 } 
 
 // Save to File
-func (d deck) saveToFile() {
-	err := os.WriteFile("myDeck", []byte(d.toString()), 0666)
+func (d deck) saveToFile(name string) {
+	err := os.WriteFile(name, []byte(d.toString()), 0666)
 	if err != nil {
 		fmt.Println("Error: ", err)
 		os.Exit(1)
